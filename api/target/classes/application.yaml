@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: Brmals Lazzy Api Services
+  profiles:
+    active: local
+# Server HTTP port.
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+# DATASOURCE
+api:
+  main:
+    datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      pool-name: brmals_HikariCP
+      maximum-pool-size: 10
+      max-life-time: 60000
+      idle-timeout: 30000
+      url: jdbc:mysql://localhost:3306/general_dev?autoReconnect=true&useSSL=false
+      username: ashokrajaboda
+      password: dev@123
+      prepStmtCacheSize: 250
+      prepStmtCacheSqlLimit: 2048
+      cachePrepStmts: true
+      useServerPrepStmts: true
